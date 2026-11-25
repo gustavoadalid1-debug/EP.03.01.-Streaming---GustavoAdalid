@@ -40,7 +40,7 @@ source venv/bin/activate
 jupyter lab
 ```
 
-Abre el notebook y ejecuta las celdas en orden. El sink `console` imprime los resultados en la Terminal 2, no dentro del notebook.
+Abre el notebook y ejecuta las celdas en orden. Los resultados de cada batch se muestran dentro del notebook con `mostrar()`.
 
 Para enviar datos, escribe frases en la Terminal 1 y presiona Enter, por ejemplo:
 
@@ -52,4 +52,5 @@ Enviamos segunda linea primera
 ## Notas
 
 - Ejecuta un notebook a la vez: ambos usan el puerto 9999. Al terminar uno, ejecuta `spark.stop()` y reinicia `nc`.
+- Si ves `Cannot call methods on a stopped SparkContext` o `No active Spark session`, ejecutaste `spark.stop()` antes de tiempo: reinicia el kernel y ejecuta desde la primera celda.
 - Si `nc` queda ocupado, ciérralo con `Ctrl+C` y vuelve a abrirlo.
