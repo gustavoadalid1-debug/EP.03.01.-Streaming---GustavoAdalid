@@ -51,6 +51,7 @@ Enviamos segunda linea primera
 
 ## Notas
 
-- Ejecuta un notebook a la vez: ambos usan el puerto 9999. Al terminar uno, ejecuta `spark.stop()` y reinicia `nc`.
-- Si ves `Cannot call methods on a stopped SparkContext` o `No active Spark session`, ejecutaste `spark.stop()` antes de tiempo: reinicia el kernel y ejecuta desde la primera celda.
+- Ejecuta un notebook a la vez: ambos usan el puerto 9999. Al terminar uno, cierra su kernel.
+- Ejecuta las celdas una por una; no uses *Run All*, porque los pasos con `nc` necesitan que tú envíes las frases.
+- Si ves `Cannot call methods on a stopped SparkContext`, reinicia el kernel (Kernel > Restart) y ejecuta desde la primera celda.
 - Si `nc` queda ocupado, ciérralo con `Ctrl+C` y vuelve a abrirlo.
